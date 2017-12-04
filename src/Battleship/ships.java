@@ -1,6 +1,8 @@
 package Battleship;
 import Battleship.Result;
+import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
 public class ships {
 private final String name;
@@ -20,8 +22,11 @@ public static void hit() {
 		System.out.println("WOW You destroyed the ship");
 	}
 }
-public Rectangle rectangle(double w, int h) {
+public Rectangle rectangle(double w, double h) {
+	Image ships = new Image("https://www.simpleplanes.com/GameData/aircraft/84/47BBm5-TopView.png");
 	Rectangle r = new Rectangle(w,h, Color.GREY);
+	//r.setFill(new ImagePattern(ships));
+	r.setStroke(Color.BLACK);
 	return r;
 }
 
@@ -38,4 +43,8 @@ public String getName() {
 }
 public int getSize() {
 	return size;
-}}
+}
+public int getLives() {
+	return Lives;
+}
+}

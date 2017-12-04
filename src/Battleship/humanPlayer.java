@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
-public class humanPlayer implements Player, EventHandler<ActionEvent> {
+public class humanPlayer implements Player {
 private int hitsLeft = 17;
 
 private int id;
@@ -18,17 +19,14 @@ public humanPlayer(int id) {
 }
 @Override
 public void placeShips() {
-	board.placeShipsOnBoard();
-	
+SetShips p1b = new SetShips();
 }
+
 @Override
 public void fireAt(Player opponent) {
 	System.out.printf("Player %d chose your spot for the attack", id);
 	
 }
-@Override
-public void handle(ActionEvent event) {
-	// TODO Auto-generated method stub
-	
-}
+
+
 }

@@ -1,7 +1,7 @@
 package Battleship;
 
 public interface Player {
-void placeShips();
+abstract void placeShips();
 void fireAt(Player opponent);
 
 }
